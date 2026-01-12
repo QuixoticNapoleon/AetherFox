@@ -1,0 +1,143 @@
+/* ═══════════════════════════════════════════════════════════════════
+   🎨 GLOBAL UI TRANSPARENCY
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Main browser window */
+#main-window,
+#navigator-toolbox,
+#browser,
+#browser-panel,
+#sidebar-box {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Toolbars (tab bar, nav bar, bookmarks bar) */
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+.toolbar-items {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+  background-image: none !important;
+}
+
+/* Sidebar */
+#sidebar {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Menus & popups */
+menupopup,
+panelview,
+.panel-subview-body,
+.popup-internal-box {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* URL bar dropdown */
+#urlbar-background,
+.urlbarView {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   🎨 CSS VARIABLES & THEME OVERRIDES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Remove forced opaque themes */
+:root {
+  --toolbar-bgcolor: transparent !important;
+  --lwt-accent-color: transparent !important;
+  --lwt-toolbar-field-background-color: rgba(0,54,54,0.3) !important;
+  --toolbar-field-background-color: rgba(0, 15, 15, 0.3) !important;
+  --toolbar-field-focus-background-color: rgba(0, 67, 68, 1) !important;
+  --tabs-navbar-separator-color: rgba(0, 0, 0, 0) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background,
+.tabbrowser-tab[multiselected="true"] .tab-background {
+  background-color: rgba(0, 67, 68, 0.3) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   🙈 HIDE UI ELEMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Hide the normal tab bar */
+#TabsToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Hide the bookmarks / personal toolbar */
+#PersonalToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Hide all sidebar headers (History, Bookmarks, etc.) */
+/* For old sidebar (sidebar.revamp: false) */
+#sidebar-header {
+  display: none !important;
+}
+
+/* For new revamped sidebar (sidebar.revamp: true) - Firefox 146+ */
+#sidebar-panel-header {
+  display: none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   🌳 TREE STYLE TABS CONFIGURATION
+   ═══════════════════════════════════════════════════════════════════ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Sidebar background when TST is open */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  background: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Sidebar content background when TST is active */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Sidebar overall background */
+#sidebar-box {
+  background-color: #003636 !important;
+}
+
+/* Tree Style Tab tab background */
+treechildren::-moz-tree-row(odd),
+treechildren::-moz-tree-row(even) {
+  background-color: #003636 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   URL SETTINGS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Always show full URL, even when focused */
+#urlbar[focused] #urlbar-input,
+#urlbar:not([focused]) #urlbar-input {
+  text-align: left !important;
+}
+
+/* Disable URL reveal-on-hover behavior */
+#urlbar-input {
+  overflow: visible !important;
+}
+
+
+#identity-box.extensionPage:has(label[value*="Startpage"]) {
+    display: none !important;
+}
+
