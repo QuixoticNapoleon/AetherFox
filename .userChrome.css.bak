@@ -1,0 +1,94 @@
+/* ===== GLOBAL UI TRANSPARENCY ===== */
+
+/* Main browser window */
+#main-window,
+#navigator-toolbox,
+#browser,
+#browser-panel,
+#sidebar-box {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Toolbars (tab bar, nav bar, bookmarks bar) */
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+.toolbar-items {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+  background-image: none !important;
+}
+
+/* Sidebar */
+#sidebar,
+#sidebar-header {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Menus & popups */
+menupopup,
+panelview,
+.panel-subview-body,
+.popup-internal-box {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* URL bar dropdown */
+#urlbar-background,
+.urlbarView {
+  background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* Remove forced opaque themes */
+:root {
+  --toolbar-bgcolor: transparent !important;
+  --lwt-accent-color: transparent !important;
+  --lwt-toolbar-field-background-color: rgba(0,54,54,0.3) !important;
+  --toolbar-field-background-color: rgba(0, 15, 15, 0.3) !important;
+  --toolbar-field-focus-background-color: rgba(0, 67, 68, 1) !important;
+  --tabs-navbar-separator-color: rgba(0, 0, 0, 0) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background,
+.tabbrowser-tab[multiselected="true"] .tab-background {
+  background-color: rgba(0, 67, 68, 0.3) !important;
+}
+
+/* Hide the normal tab bar */
+#TabsToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Hide the bookmarks / personal toolbar */
+#PersonalToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Sidebar background when TST is open */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  background: rgba(0,54,54,0.3) !important;
+}
+/* Hide the Tree Style Tabs sidebar header */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+    display: none !important;
+}
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Sidebar overall background */
+#sidebar-box {
+  background-color: #003636 !important;
+}
+
+/* Tree Style Tab tab background */
+treechildren::-moz-tree-row(odd),
+treechildren::-moz-tree-row(even) {
+  background-color: #003636 !important;
+}
