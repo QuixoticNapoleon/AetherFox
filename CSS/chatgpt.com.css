@@ -15,7 +15,8 @@
         background-position: center center !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
-        overflow: hidden !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
     }
 
     /* React root */
@@ -25,10 +26,11 @@
     }
 
     /* Main scrolling container */
-    main {
-        background: transparent !important;
-        overflow-y: auto !important;
-    }
+main {
+    background: transparent !important;
+    overflow-y: auto !important;
+    min-height: 100vh !important;
+}
 }
 
 @-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
@@ -151,4 +153,21 @@
     }
     
     
+}
+
+/* Mobile / responsive header */
+header,
+[data-testid="conversation-header"] {
+    background-color: #003636 !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Desktop: transparent, keep sticky */
+@media (min-width: 1024px) {
+    header,
+    [data-testid="conversation-header"] {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+    }
 }
