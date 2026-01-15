@@ -88,120 +88,66 @@
 
 @-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
 
-    /* The actual sidebar container */
-    aside {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-
-    /* EVERYTHING inside the sidebar */
-    aside *,
-    aside *::before,
-    aside *::after {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-    
-
-}
-
-@-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
-
-    /* Chat history container itself */
-    #history,
-    [data-testid="history"],
-    [role="list"] {
-        background-color: #003636 !important;
-    }
-
-    /* Individual chat items */
-    #history > *,
-    [data-testid="history"] > *,
-    [role="list"] > * {
-        background-color: #003636 !important;
-    }
-
-    /* Scroll container that wraps history */
-    div:has(> #history) {
-        background-color: #003636 !important;
-    }
-    
-        /* Sidebar header (ChatGPT logo + collapse button) */
-    #sidebar-header {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-
-    /* Anything inside the sidebar header */
-    #sidebar-header *,
-    #sidebar-header *::before,
-    #sidebar-header *::after {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-    
-    
-    /* Wrapper under sidebar header */
-    .touch\:px-1\.5.px-2 {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-
-    /* Anything inside it */
-    .touch\:px-1\.5.px-2 *,
-    .touch\:px-1\.5.px-2 *::before,
-    .touch\:px-1\.5.px-2 *::after {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-
-    
-        /* Apps / Projects wrapper */
-    div[class^="pb-["] {
-        background-color: #003636 !important;
-    }
-
-    /* Apps & Projects rows */
-    .__menu-item[data-sidebar-item="true"] {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-
-    /* Apps button specifically */
-    [data-testid="apps-button"] {
-        background-color: #003636 !important;
-    }
-
-    /* Inner contents (icon + text) */
-    .__menu-item *,
-    .__menu-item *::before,
-    .__menu-item *::after {
-        background-color: #003636 !important;
-        background-image: none !important;
-    }
-    
-    
-    /* Sidebar root */
+    /* ========== SIDEBAR BASE ========== */
+    aside,
     #stage-slideover-sidebar {
+        background-color: #003636 !important;
+        background-image: none !important;
         --sidebar-bg: #003636 !important;
-        background-color: #003636 !important;
-    }
-    
-    
-    /* Main sidebar */
-    #stage-slideover-sidebar {
-        --sidebar-bg: #003636 !important;
-        background-color: #003636 !important;
-    }
-
-    /* Sidebar elevated surfaces (account section, sticky footer) */
-    #stage-slideover-sidebar {
         --bg-elevated-secondary: #003636 !important;
     }
 
-    /* Kill the shadow/fade edge */
     #stage-slideover-sidebar .shadow-sharp-edge-bottom {
         box-shadow: none !important;
+    }
+
+    /* ========== SIDEBAR HEADER ========== */
+    #sidebar-header {
+        background-color: #003636 !important;
+    }
+
+    .touch\:px-1\.5.px-2 {
+        background-color: #003636 !important;
+    }
+
+    /* ========== MENU ITEMS BASE ========== */
+    .__menu-item[data-sidebar-item="true"] {
+        background-color: #003636 !important;
+        border-radius: 10px !important;
+    }
+
+    /* Hover (solid) */
+    .__menu-item[data-sidebar-item="true"]:hover {
+        background-color: #004344 !important;
+    }
+
+    /* ========== CHAT HISTORY ITEMS ========== */
+
+    /* The REAL clickable paint layer */
+    a[data-sidebar-item="true"]
+    > div.flex.min-w-0.grow.items-center.gap-2\.5 {
+        border-radius: 10px !important;
+    }
+
+    /* Hover (non-active) */
+    a[data-sidebar-item="true"]:hover:not([data-active])
+    > div.flex.min-w-0.grow.items-center.gap-2\.5 {
+        background-color: #004344 !important;
+    }
+
+/* ACTIVE / CURRENT CHAT — FULL BOX */
+.__menu-item[data-sidebar-item="true"][data-active] {
+    background-color: #008282 !important;
+    border-radius: 10px !important;
+}
+    /* ========== ACCOUNT SECTION ========== */
+    [data-testid="accounts-profile-button"] {
+        background-color: #003636 !important;
+        border-radius: 10px !important;
+    }
+
+    [data-testid="accounts-profile-button"]:hover {
+        background-color: #004344 !important;
     }
     
     

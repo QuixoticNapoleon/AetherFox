@@ -192,3 +192,23 @@ tab-item {
   scrollbar-color: var(--browser-toolbar_text-darker, var(--theme-colors-toolbar_bottom_separator, var(--in-content-button-background-hover-mixed)))
                    var(--theme-colors-toolbar, var(--in-content-box-background));
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   🔤 FONT SIZE CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Set tab font size to 13px */
+tab-item,
+tab-item *,
+.label,
+tab-label {
+  font-size: 13px !important;
+}
+
+/* Set font size for other sidebar elements */
+.after-tabs button,
+.after-tabs [role="button"],
+#subpanel-container {
+  font-size: 13px !important;
+}
