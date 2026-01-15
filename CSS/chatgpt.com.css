@@ -15,8 +15,9 @@
         background-position: center center !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
+
+            overflow-x: hidden !important;
+    overflow-y: auto !important;
     }
 
     /* React root */
@@ -28,9 +29,11 @@
     /* Main scrolling container */
 main {
     background: transparent !important;
-    overflow-y: auto !important;
+    overflow: visible !important;
     min-height: 100vh !important;
 }
+
+
 }
 
 @-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
@@ -169,5 +172,20 @@ header,
     [data-testid="conversation-header"] {
         background-color: transparent !important;
         backdrop-filter: none !important;
+    }
+}
+
+@-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
+
+    /* Offset chat content so it doesn't go under the sticky header */
+    main {
+        padding-top: 56px !important; /* desktop header height */
+    }
+
+    /* Mobile / responsive header is taller */
+    @media (max-width: 1023px) {
+        main {
+            padding-top: 64px !important;
+        }
     }
 }
