@@ -189,3 +189,50 @@ header,
         }
     }
 }
+
+@-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
+
+    /* ===== OUTER CODE BLOCK WRAPPER ===== */
+    pre {
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 14px !important;
+        overflow: visible !important;
+    }
+
+    /* ===== ACTUAL BACKGROUND LAYER ===== */
+    pre > div {
+        background-color: #002323 !important;
+        border-radius: 14px !important;
+        overflow: hidden !important; /* THIS is the key */
+    }
+
+    /* ===== LANGUAGE HEADER BAR ===== */
+    pre > div > div:first-child {
+        background-color: #002323 !important;
+        border-top-left-radius: 14px !important;
+        border-top-right-radius: 14px !important;
+    }
+
+    /* ===== SCROLL AREA + CODE ===== */
+    pre code {
+        background-color: #002323 !important;
+        padding: 14px !important;
+        display: block !important;
+    }
+
+    /* ===== INLINE CODE ===== */
+    code:not(pre code) {
+        background-color: #002323 !important;
+        border-radius: 6px !important;
+        padding: 0.15em 0.35em !important;
+    }
+    
+    
+        pre div,
+    pre span {
+        background-color: #002323 !important;
+    }
+
+    
+}
