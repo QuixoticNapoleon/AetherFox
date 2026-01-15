@@ -236,3 +236,11 @@ header,
 
     
 }
+
+@-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
+
+    /* Edit message container (pencil mode) */
+    .bg-token-main-surface-tertiary {
+        background-color: #003636 !important;
+    }
+}
