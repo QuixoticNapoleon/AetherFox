@@ -141,3 +141,39 @@ treechildren::-moz-tree-row(even) {
     display: none !important;
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════
+   📏 COMPACT TOP BAR
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Make navigation bar taller than URL bar */
+#nav-bar {
+  max-height: 40px !important;
+  min-height: 40px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* Set font size to 13px for top bar elements */
+#nav-bar,
+#nav-bar * {
+  font-size: 13px !important;
+}
+
+/* Compact URL bar */
+#urlbar,
+#urlbar-input {
+  font-size: 13px !important;
+  min-height: 28px !important;
+}
+
+/* Compact toolbar buttons */
+#nav-bar toolbarbutton {
+  padding: 2px !important;
+}
+
+/* Compact URL bar container */
+#urlbar-container {
+  max-height: 28px !important;
+}
+
