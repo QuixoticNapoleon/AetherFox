@@ -1,4 +1,12 @@
-:root {
-  --in-content-page-background: #00000000 !important;
-  --in-content-box-background: #00000088 !important;
+/* userContent.css */
+@-moz-document url(about:newtab), url("about:home") {
+  html {
+    --newtab-background-color: transparent !important;
+    --newtab-background-color-secondary: transparent !important;
+    background: transparent !important;
+  }
+
+  body {
+    background: transparent !important;
+  }
 }
