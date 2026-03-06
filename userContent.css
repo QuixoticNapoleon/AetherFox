@@ -1,3 +1,6 @@
+/* ╔════════════════════════════════════════════════════════════╗
+   ║                        USERCONTENT                         ║
+   ╚════════════════════════════════════════════════════════════╝ */
 /* userContent.css */
 @-moz-document url(about:newtab), url("about:home") {
   html {
@@ -11,53 +14,48 @@
   }
 }
 
-/* ==UserStyle==
-@name           ChatGPT Custom Glass Theme
-@namespace      github.com/openstyles/stylus
-@version        1.1.0
-@description    Custom background, chat bubbles, wider layout, sidebar styling, header fixes, and code block theming for ChatGPT
-@author         Me
-==/UserStyle== */
 
+/* ╔════════════════════════════════════════════════════════════╗
+   ║                        CHATGPT                             ║
+   ╚════════════════════════════════════════════════════════════╝ */
 @-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
 
-    /* ╔════════════════════════════════════════════════════════════╗
-       ║                     PAGE BACKGROUND                       ║
-       ╚════════════════════════════════════════════════════════════╝ */
+	/* ╔════════════════════════════════════════════════════════════╗
+	   ║                     PAGE BACKGROUND                       ║
+	   ╚════════════════════════════════════════════════════════════╝ */
 
-    html,
-    body {
-        height: 100% !important;
-        background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8NGslMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D") !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: fixed !important;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-    }
+	html,
+	body {
+		min-height: 100% !important;
+		overflow-x: hidden !important;
+		overflow-y: hidden !important;
+		background: transparent !important;
+	}
 
-    #__next {
-        background: transparent !important;
-        min-height: 100% !important;
-    }
+	body::before {
+		content: "" !important;
+		position: fixed !important;
+		inset: 0 !important;
+		z-index: -1 !important;
+		background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8NGslMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D") !important;
+		background-size: cover !important;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+	}
 
-    main {
-        background: transparent !important;
-        overflow: visible !important;
-        min-height: 100vh !important;
-        padding-top: 56px !important; /* prevents content hiding under sticky header */
-    }
+	#__next {
+		background: transparent !important;
+		min-height: 100% !important;
+		height: auto !important;
+	}
 
-    @media (max-width: 1023px) {
-        main {
-            padding-top: 64px !important;
-        }
-    }
-
-    .content-fade::after {
-        background: none !important;
-    }
+	main {
+		background: transparent !important;
+		min-height: auto !important;
+		height: auto !important;
+		overflow: visible !important;
+		padding-top: 0 !important;
+	}
 
 
     /* ╔════════════════════════════════════════════════════════════╗
@@ -228,4 +226,36 @@
     pre span {
         background-color: #002323 !important;
     }
+
+	/* ╔════════════════════════════════════════════════════════════╗
+	   ║                 REMOVE BOTTOM GREY / BLUR                 ║
+	   ╚════════════════════════════════════════════════════════════╝ */
+
+	.content-fade::after,
+	.content-fade,
+	.bg-token-bg-elevated-secondary,
+	.bg-token-bg-primary,
+	.bg-token-main-surface-primary,
+	.bg-token-main-surface-secondary,
+	.bg-token-sidebar-surface-primary,
+	.bg-token-sidebar-surface-secondary {
+		background: transparent !important;
+		background-color: transparent !important;
+		background-image: none !important;
+		backdrop-filter: none !important;
+		-webkit-backdrop-filter: none !important;
+	}
+
+	/* Composer / bottom dock wrappers */
+	[data-type="unified-composer"],
+	[data-type="unified-composer"] > div,
+	form:has(#prompt-textarea),
+	form:has(.ProseMirror) {
+		background: transparent !important;
+		background-color: transparent !important;
+		background-image: none !important;
+		backdrop-filter: none !important;
+		-webkit-backdrop-filter: none !important;
+		box-shadow: none !important;
+	}
 }
