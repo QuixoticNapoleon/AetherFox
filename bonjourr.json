@@ -1,0 +1,176 @@
+{
+  "about": {
+    "browser": "firefox",
+    "version": "22.0.0"
+  },
+  "showall": true,
+  "lang": "en",
+  "dark": "enable",
+  "favicon": "🏡",
+  "tabtitle": "Home",
+  "greeting": "Ben",
+  "greetingsize": "3",
+  "greetingsmode": "auto",
+  "pagegap": 1,
+  "pagewidth": 1600,
+  "time": true,
+  "main": true,
+  "dateformat": "auto",
+  "quicklinks": true,
+  "textShadow": 0.2,
+  "announcements": "major",
+  "review": -1,
+  "css": "/* Hides regular backgrounds to make Bonjourr transparent. */\n#background-media, #background-color {\n  display: none !important;\n}\n\n.tabbing {\n  background-color: transparent !important;\n}\n\nbody {\n  background-color: transparent !important;\n}\n\n#credit {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s, visibility 0.3s;\n}\n\n#credit-container:hover #credit {\n  visibility: visible;\n  opacity: 1;\n}",
+  "hide": {
+    "settingsicon": true
+  },
+  "linkstyle": "medium",
+  "linktitles": true,
+  "linkbackgrounds": true,
+  "linknewtab": false,
+  "linksrow": 6,
+  "linkiconradius": 1.1,
+  "linkgroups": {
+    "on": false,
+    "selected": "default",
+    "groups": [
+      "default"
+    ],
+    "pinned": [],
+    "synced": []
+  },
+  "backgrounds": {
+    "type": "color",
+    "fadein": 600,
+    "blur": 8,
+    "bright": 0.8,
+    "frequency": "pause",
+    "color": "#185A63",
+    "urls": "",
+    "images": "bonjourr-images-daylight",
+    "videos": "bonjourr-videos-daylight",
+    "queries": {},
+    "texture": {
+      "type": "none"
+    },
+    "pausedVideo": {
+      "urls": {
+        "full": "https://videos.pexels.com/video-files/857136/857136-hd_1280_720_24fps.mp4",
+        "medium": "https://videos.pexels.com/video-files/857136/857136-hd_1280_720_24fps.mp4",
+        "small": "https://videos.pexels.com/video-files/857136/857136-sd_640_360_24fps.mp4"
+      },
+      "format": "video",
+      "page": "https://www.pexels.com/video/milky-way-glowing-at-night-857136/",
+      "username": "Vimeo",
+      "duration": 21,
+      "thumbnail": "https://images.pexels.com/videos/857136/pictures/preview-0.jpg"
+    }
+  },
+  "clock": {
+    "size": 1,
+    "ampm": false,
+    "analog": false,
+    "seconds": true,
+    "ampmlabel": false,
+    "worldclocks": false,
+    "timezone": "auto"
+  },
+  "worldclocks": [],
+  "analogstyle": {
+    "face": "none",
+    "hands": "modern",
+    "shape": "round",
+    "border": "#ffff",
+    "background": "#fff2"
+  },
+  "weather": {
+    "city": "central",
+    "unit": "metric",
+    "provider": "",
+    "moreinfo": "none",
+    "forecast": "auto",
+    "temperature": "actual",
+    "geolocation": "approximate"
+  },
+  "greetingscustom": {
+    "morning": "",
+    "afternoon": "",
+    "evening": "",
+    "night": ""
+  },
+  "notes": {
+    "on": false,
+    "width": 40,
+    "opacity": 0.1,
+    "align": "left",
+    "text": "## Edit this note!\n\n[ ] With markdown titles, lists, and checkboxes\n\n[ ] Learn more on https://bonjourr.fr/docs/overview"
+  },
+  "searchbar": {
+    "on": false,
+    "opacity": 0.1,
+    "newtab": false,
+    "suggestions": true,
+    "engine": "custom",
+    "request": "google.com/%s",
+    "placeholder": "Bon Voyage!"
+  },
+  "quotes": {
+    "on": true,
+    "type": "classic",
+    "frequency": "hour",
+    "author": true,
+    "last": 1772810807169
+  },
+  "pomodoro": {
+    "on": true,
+    "mode": "pomodoro",
+    "pause": 0,
+    "end": 1772812849726,
+    "timeFor": {
+      "pomodoro": 1500,
+      "break": 300,
+      "longbreak": 1200
+    },
+    "focus": false,
+    "sound": true,
+    "history": []
+  },
+  "font": {
+    "size": "14",
+    "family": "",
+    "system": true,
+    "weightlist": [],
+    "weight": "300"
+  },
+  "supporters": {
+    "enabled": true,
+    "closed": false,
+    "month": 1,
+    "closedMonth": 3
+  },
+  "move": {
+    "selection": "single",
+    "layouts": {
+      "single": {
+        "items": {},
+        "grid": [
+          [
+            "time"
+          ],
+          [
+            "main"
+          ],
+          [
+            "pomodoro"
+          ],
+          [
+            "quicklinks"
+          ],
+          [
+            "quotes"
+          ]
+        ]
+      }
+    }
+  }
+}
