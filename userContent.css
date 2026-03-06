@@ -10,3 +10,222 @@
     background: transparent !important;
   }
 }
+
+/* ==UserStyle==
+@name           ChatGPT Custom Glass Theme
+@namespace      github.com/openstyles/stylus
+@version        1.1.0
+@description    Custom background, chat bubbles, wider layout, sidebar styling, header fixes, and code block theming for ChatGPT
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://chatgpt.com/"), url-prefix("https://chat.openai.com/") {
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                     PAGE BACKGROUND                       ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    html,
+    body {
+        height: 100% !important;
+        background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8NGslMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+
+    #__next {
+        background: transparent !important;
+        min-height: 100% !important;
+    }
+
+    main {
+        background: transparent !important;
+        overflow: visible !important;
+        min-height: 100vh !important;
+        padding-top: 56px !important; /* prevents content hiding under sticky header */
+    }
+
+    @media (max-width: 1023px) {
+        main {
+            padding-top: 64px !important;
+        }
+    }
+
+    .content-fade::after {
+        background: none !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                  ASSISTANT MESSAGE BUBBLES               ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    div[data-message-author-role="assistant"] {
+        margin: 8px 0 !important;
+        padding: 12px 16px !important;
+        border: 1px solid rgba(17, 190, 191, 0.8) !important;
+        border-radius: 14px !important;
+        background-color: rgba(0, 54, 54, 0.7) !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                     COMPOSER / PROMPT                    ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    [data-type="unified-composer"] .bg-token-bg-primary,
+    #prompt-textarea,
+    .ProseMirror,
+    .wcDTda_prosemirror-parent,
+    .bg-token-main-surface-tertiary {
+        background-color: #003636 !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                    MAIN CHAT WIDTH                       ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    .max-w-\(--thread-content-max-width\) {
+        width: 85vw !important;
+        max-width: 85vw !important;
+    }
+
+    body:has(aside) .max-w-\(--thread-content-max-width\) {
+        width: calc(85vw - 16rem) !important;
+        max-width: calc(85vw - 16rem) !important;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                    SIDEBAR FOUNDATION                    ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    aside,
+    #stage-slideover-sidebar {
+        background-color: #003636 !important;
+        background-image: none !important;
+        --sidebar-bg: #003636 !important;
+        --bg-elevated-secondary: #003636 !important;
+    }
+
+    #stage-slideover-sidebar .shadow-sharp-edge-bottom {
+        box-shadow: none !important;
+    }
+
+    #sidebar-header,
+    .touch\:px-1\.5.px-2 {
+        background-color: #003636 !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                     SIDEBAR ITEMS                        ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    .__menu-item[data-sidebar-item="true"] {
+        background-color: #003636 !important;
+        border-radius: 10px !important;
+    }
+
+    .__menu-item[data-sidebar-item="true"]:hover {
+        background-color: #004344 !important;
+    }
+
+    a[data-sidebar-item="true"] > div.flex.min-w-0.grow.items-center.gap-2\.5 {
+        border-radius: 10px !important;
+    }
+
+    a[data-sidebar-item="true"]:hover:not([data-active]) > div.flex.min-w-0.grow.items-center.gap-2\.5 {
+        background-color: #004344 !important;
+    }
+
+    .__menu-item[data-sidebar-item="true"][data-active] {
+        background-color: #008282 !important;
+        border-radius: 10px !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                    ACCOUNT / PROFILE                     ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    [data-testid="accounts-profile-button"] {
+        background-color: #003636 !important;
+        border-radius: 10px !important;
+    }
+
+    [data-testid="accounts-profile-button"]:hover {
+        background-color: #004344 !important;
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                     HEADER STYLING                       ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    header,
+    [data-testid="conversation-header"] {
+        background-color: #003636 !important;
+        background-image: none !important;
+        backdrop-filter: none !important;
+    }
+
+    @media (min-width: 1024px) {
+        header,
+        [data-testid="conversation-header"] {
+            background-color: transparent !important;
+            background-image: none !important;
+            backdrop-filter: none !important;
+        }
+    }
+
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                    CODE BLOCK STYLING                    ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    pre {
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 14px !important;
+        overflow: visible !important;
+    }
+
+    pre > div {
+        background-color: #002323 !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+    }
+
+    pre > div > div:first-child {
+        background-color: #002323 !important;
+        border-top-left-radius: 14px !important;
+        border-top-right-radius: 14px !important;
+    }
+
+    pre code {
+        display: block !important;
+        padding: 14px !important;
+        background-color: #002323 !important;
+    }
+
+    code:not(pre code) {
+        padding: 0.15em 0.35em !important;
+        border-radius: 6px !important;
+        background-color: #002323 !important;
+    }
+
+    pre div,
+    pre span {
+        background-color: #002323 !important;
+    }
+}
