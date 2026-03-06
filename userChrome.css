@@ -177,3 +177,30 @@ treechildren::-moz-tree-row(even) {
   max-height: 28px !important;
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   BACKPLATE
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* userChrome.css */
+
+/* 1) Set the variable Firefox uses for the tab/content backplate */
+:root {
+  --tabpanel-background-color: rgba(0, 54, 54, 0.3) !important;
+}
+
+/* 2) Override the actual elements that paint behind the page */
+#browser,
+.browserContainer,
+#tabbrowser-tabpanels,
+#tabbrowser-tabbox {
+  background: rgba(0, 54, 54, 0.3) !important;
+  background-color: rgba(0, 54, 54, 0.3) !important;
+  background-image: none !important;
+}
+
+/* 3) Make the browser element itself not reintroduce another backdrop */
+browser[type="content-primary"],
+browser[type="content"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
