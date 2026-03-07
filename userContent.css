@@ -259,3 +259,154 @@
 		box-shadow: none !important;
 	}
 }
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║                        GOOGLE SEARCH                       ║
+   ╚════════════════════════════════════════════════════════════╝ */
+
+@-moz-document domain("google.com") {
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                    ROOT TRANSPARENCY                     ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    html,
+    body,
+    #viewport,
+    #gsr,
+    #main,
+    .main {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ╔════════════════════════════════════════════════════════════╗
+       ║                  CONTENT / RESULTS AREA                  ║
+       ╚════════════════════════════════════════════════════════════╝ */
+
+    #search,
+    #rso,
+    #rcnt,
+    #center_col,
+    .g,
+    .MjjYud,
+    .tF2Cxc,
+    .hlcw0c,
+    .v7W49e {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Main text */
+    #search,
+    #search div,
+    #search span,
+    #search cite,
+    #search h3,
+    #rso,
+    #rso div,
+    #rso span,
+    #rso cite,
+    #rso h3,
+    #center_col,
+    #center_col div,
+    #center_col span,
+    #center_col cite,
+    #center_col h3 {
+        color: #e8f6f6 !important;
+    }
+
+    /* Keep links coloured */
+    #search a:link,
+    #rso a:link,
+    #center_col a:link {
+        color: #9cc2ff !important;
+    }
+
+    #search a:visited,
+    #rso a:visited,
+    #center_col a:visited {
+        color: #d2a6ff !important;
+    }
+
+    #search a:hover,
+    #rso a:hover,
+    #center_col a:hover,
+    #search a:focus,
+    #rso a:focus,
+    #center_col a:focus {
+        color: #e8f6f6 !important;
+        text-decoration-color: #004848 !important;
+    }
+
+
+/* SEARCH BAR CONTAINER */
+#searchform,
+#searchform.minidiv,
+.A8SBwf {
+    background: rgba(0, 54, 54, 0.5) !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* SEARCH BOX (the rounded one) */
+.RNNXgb,
+.minidiv .RNNXgb {
+    background: #002b2b !important;
+    background-color: #002b2b !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ALL VISIBLE CONTENT LINES / SEPARATORS */
+#search *,
+#rso *,
+#rcnt *,
+#center_col * {
+    border-color: #8affff !important;
+    border-top-color: #8affff !important;
+    border-right-color: #8affff !important;
+    border-bottom-color: #8affff !important;
+    border-left-color: #8affff !important;
+    outline-color: #8affff !important;
+}
+
+/* actual separator elements */
+#search hr,
+#rso hr,
+#rcnt hr,
+#center_col hr,
+#search [role="separator"],
+#rso [role="separator"],
+#rcnt [role="separator"],
+#center_col [role="separator"] {
+    border-color: #8affff !important;
+    background-color: #8affff !important;
+}
+
+
+	/* LINE BELOW THE ENTIRE STICKY SEARCH BAR */
+#appbar,
+.appbar,
+#searchform.minidiv,
+.minidiv,
+.sfbg,
+.sfbgg,
+#top_nav,
+#hdtb {
+    border-color: #8affff !important;
+    border-bottom-color: #8affff !important;
+    outline-color: #8affff !important;
+}
+
+}
