@@ -75,13 +75,10 @@
        ║                     COMPOSER / PROMPT                    ║
        ╚════════════════════════════════════════════════════════════╝ */
 
-    [data-type="unified-composer"] .bg-token-bg-primary,
-    #prompt-textarea,
-    .ProseMirror,
-    .wcDTda_prosemirror-parent,
-    .bg-token-main-surface-tertiary {
-        background-color: #003636 !important;
-    }
+	[data-type="unified-composer"] .bg-token-bg-primary {
+		background-color: rgba(0, 35, 35, 0.5) !important;
+		backdrop-filter: blur(10000px) !important;
+	}
 
 
     /* ╔════════════════════════════════════════════════════════════╗
@@ -186,46 +183,15 @@
         }
     }
 
+/* ╔════════════════════════════════════════════════════════════╗
+   ║                    CODE BLOCK STYLING                    ║
+   ╚════════════════════════════════════════════════════════════╝ */
 
-    /* ╔════════════════════════════════════════════════════════════╗
-       ║                    CODE BLOCK STYLING                    ║
-       ╚════════════════════════════════════════════════════════════╝ */
+/* CODE BLOCK STYLING */
+div.rounded-3xl.bg-token-bg-elevated-secondary:has(#code-block-viewer) {
+    background-color: rgba(0, 35, 35, 0.5) !important;
+}
 
-    pre {
-        padding: 0 !important;
-        background: none !important;
-        border-radius: 14px !important;
-        overflow: visible !important;
-    }
-
-    pre > div {
-        background-color: #002323 !important;
-        border-radius: 14px !important;
-        overflow: hidden !important;
-    }
-
-    pre > div > div:first-child {
-        background-color: #002323 !important;
-        border-top-left-radius: 14px !important;
-        border-top-right-radius: 14px !important;
-    }
-
-    pre code {
-        display: block !important;
-        padding: 14px !important;
-        background-color: #002323 !important;
-    }
-
-    code:not(pre code) {
-        padding: 0.15em 0.35em !important;
-        border-radius: 6px !important;
-        background-color: #002323 !important;
-    }
-
-    pre div,
-    pre span {
-        background-color: #002323 !important;
-    }
 
 	/* ╔════════════════════════════════════════════════════════════╗
 	   ║                 REMOVE BOTTOM GREY / BLUR                 ║
@@ -258,4 +224,5 @@
 		-webkit-backdrop-filter: none !important;
 		box-shadow: none !important;
 	}
+
 }
