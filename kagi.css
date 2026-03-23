@@ -1,0 +1,121 @@
+/* ╔════════════════════════════════════════════════════════════╗
+   ║                 KAGI TRANSPARENCY THEME                   ║
+   ╚════════════════════════════════════════════════════════════╝ */
+
+/* ---------- Root page layers ---------- */
+html,
+body,
+main,
+#main,
+#search-root,
+section,
+article,
+.kagi-main,
+.kagi-search-content,
+.kagi-root,
+.results,
+.results-box,
+.results-area,
+.search-result,
+.search-result__wrapper,
+.searchResult,
+.__sri,
+.__srgi,
+.item,
+.result,
+.results-box > * {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+/* ---------- Navigation / header / footer ---------- */
+header,
+nav,
+footer,
+.tabs,
+.top-nav,
+.kagi-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ---------- Search box container ---------- */
+#searchForm,
+.search-form,
+.search-input-container,
+#searchForm > .search-input-container._0_search-input-container._0_no_multiline {
+    background: rgba(0, 54, 54, 0.18) !important;
+    background-color: rgba(0, 54, 54, 0.18) !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 14px !important;
+}
+
+/* ---------- Search input itself ---------- */
+#searchBar,
+input[name="q"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* ---------- Dropdowns / autosuggest ---------- */
+[role="listbox"],
+[role="menu"],
+[role="dialog"],
+.auto_suggestions,
+.auto_suggestions_in {
+    background: rgba(0, 54, 54, 0.92) !important;
+    background-color: rgba(0, 54, 54, 0.92) !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ---------- Dropdown items ---------- */
+[role="listbox"] *,
+[role="menu"] *,
+[role="dialog"] *,
+.auto_suggestions *,
+.auto_suggestions_in * {
+    opacity: 1 !important;
+    color: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* ---------- Hover / selected item inside dropdown ---------- */
+[role="option"]:hover,
+[aria-selected="true"],
+.auto_item:hover,
+.auto_item.--selected {
+    background: rgba(255, 255, 255, 0.10) !important;
+    background-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+/* ---------- Kill the right-edge smear/fade ---------- */
+.spt,
+.spt::before,
+.spt::after {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+.spt::before,
+.spt::after {
+    content: none !important;
+    display: none !important;
+}
