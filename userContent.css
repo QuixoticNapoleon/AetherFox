@@ -192,51 +192,36 @@
 	}
 
 
-	/* ╔════════════════════════════════════════════════════════════╗
-	   ║                 REMOVE BOTTOM GREY / BLUR                 ║
-	   ╚════════════════════════════════════════════════════════════╝ */
+/* ╔════════════════════════════════════════════════════════════╗
+   ║            KEEP BOTTOM FADE, NOT SIDEBAR BG              ║
+   ╚════════════════════════════════════════════════════════════╝ */
 
-	.content-fade::after,
-	.content-fade,
-	.bg-token-bg-elevated-secondary,
-	.bg-token-bg-primary,
-	.bg-token-main-surface-primary,
-	.bg-token-main-surface-secondary,
-	.bg-token-sidebar-surface-primary,
-	.bg-token-sidebar-surface-secondary {
-		background: transparent !important;
-		background-color: transparent !important;
-		background-image: none !important;
-		backdrop-filter: none !important;
-		-webkit-backdrop-filter: none !important;
-	}
+.content-fade::after,
+.content-fade {
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 54, 54, 0) 0%,
+		rgba(0, 54, 54, 0.06) 20%,
+		rgba(0, 54, 54, 0.18) 45%,
+		rgba(0, 54, 54, 0.42) 70%,
+		rgba(0, 54, 54, 0.75) 88%,
+		rgba(0, 54, 54, 1) 100%
+	) !important;
+}
+/* ╔════════════════════════════════════════════════════════════╗
+   ║              FORCE SIDEBAR BACKGROUND COLOR              ║
+   ╚════════════════════════════════════════════════════════════╝ */
 
-	/* Composer / bottom dock wrappers */
-	[data-type="unified-composer"],
-	[data-type="unified-composer"] > div,
-	form:has(#prompt-textarea),
-	form:has(.ProseMirror) {
-		background: transparent !important;
-		background-color: transparent !important;
-		background-image: none !important;
-		backdrop-filter: none !important;
-		-webkit-backdrop-filter: none !important;
-		box-shadow: none !important;
-	}
-
-	.content-fade::after,
-	.content-fade,
-	.bg-token-sidebar-surface-primary,
-	.bg-token-sidebar-surface-secondary {
-		background-image: linear-gradient(
-			to bottom,
-			rgba(0, 54, 54, 0) 0%,
-			rgba(0, 54, 54, 0.06) 20%,
-			rgba(0, 54, 54, 0.18) 45%,
-			rgba(0, 54, 54, 0.42) 70%,
-			rgba(0, 54, 54, 0.75) 88%,
-			rgba(0, 54, 54, 1) 100%
-		) !important;
-	}
+#stage-slideover-sidebar,
+#stage-slideover-sidebar nav,
+#stage-slideover-sidebar nav > aside:first-of-type,
+#stage-slideover-sidebar .bg-token-sidebar-surface-primary,
+#stage-slideover-sidebar .bg-token-sidebar-surface-secondary {
+	background-color: #003636 !important;
+	background-image: none !important;
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+	box-shadow: none !important;
+}
 
 }
