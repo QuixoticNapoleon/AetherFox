@@ -93,34 +93,6 @@ panelview,
   display: none !important;
 }
 
-
-/* ═══════════════════════════════════════════════════════════════════
-   🌳 TREE STYLE TABS CONFIGURATION
-   ═══════════════════════════════════════════════════════════════════ */
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-/* Sidebar background when TST is open */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
-  background: rgba(0, 54, 54, 0.3) !important;
-}
-
-/* Sidebar content background when TST is active */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
-  background-color: rgba(0, 54, 54, 0.3) !important;
-}
-
-/* Sidebar overall background */
-#sidebar-box {
-  background-color: #003636 !important;
-}
-
-/* Tree Style Tab tab background */
-treechildren::-moz-tree-row(odd),
-treechildren::-moz-tree-row(even) {
-  background-color: #003636 !important;
-}
-
 /* ═══════════════════════════════════════════════════════════════════
    URL SETTINGS
    ═══════════════════════════════════════════════════════════════════ */
